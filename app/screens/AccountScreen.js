@@ -20,16 +20,17 @@ const menuItems = [
       name: "email",
       backgroundColor: colors.secondary,
     },
+    targetScreen: 'Messages',
   },
 ];
 
-function AccountScreen(props) {
+function AccountScreen({ navigation }) {
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
         <ListItem
           title="Mosh Hamedani"
-          subTitle="programmingwithmosh@gmail.com"
+          subTitle="sanchit.sachdeva@gmail.com"
           image={require("../assets/user.jpg")}
         />
       </View>
@@ -47,6 +48,7 @@ function AccountScreen(props) {
                   backgroundColor={item.icon.backgroundColor}
                 />
               }
+              onPress={() => navigation.navigate(item.targetScreen)}
             />
           )}
         />

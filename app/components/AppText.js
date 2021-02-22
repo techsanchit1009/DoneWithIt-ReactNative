@@ -18,7 +18,7 @@ function AppText({ children, style, ...otherProps }) {
       style={[
         defaultStyles.text,
         style,
-        !style.fontFamily && { fontFamily: "Roboto-Regular" },
+        !style?.fontFamily && { fontFamily: "Roboto-Regular" },
       ]}
       {...otherProps}
     >
