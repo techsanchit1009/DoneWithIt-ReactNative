@@ -6,11 +6,15 @@ import ListingEditScreen from '../screens/ListingEditScreen';
 import AccountNavigator from '../navigation/AccountNavigator';
 import NewListingButton from './NewListingButton';
 import routes from './routes';
+import useNotications from '../hooks/useNotications';
 
 
 const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => {
+
+  useNotications();
+
   return (
     <Tab.Navigator>
       <Tab.Screen

@@ -9,7 +9,7 @@ import authStorage from './app/auth/storage';
 
 export default function App() {
 
-  const [user, setUser] = useState();
+  const [user, setUser] = useState({});
 
   const restoreToken = async () => {
     const user = await authStorage.getUser();
